@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SEO · Marketing OS</title>
+<link rel="stylesheet" href="../css/variables.css" />
+<link rel="stylesheet" href="../css/base.css" />
+<link rel="stylesheet" href="../css/layout.css" />
+<link rel="stylesheet" href="../css/components.css" />
+<link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+<div class="app-shell">
+  <div id="sidebar-slot"></div>
+  <div class="main">
+    <div class="topbar" id="topbar-slot"></div>
+    <div class="page">
+      <div class="page-header">
+        <div><h1>SEO</h1><p class="sub">Keyword tracking across every client with SEO enabled.</p></div>
+        <div class="page-actions"><select class="select-filter" id="f-client"><option value="">All clients</option></select></div>
+      </div>
+
+      <div class="kpi-grid" id="seo-kpis" style="grid-template-columns:repeat(4,1fr);"></div>
+
+      <div class="card" style="padding:0;overflow-x:auto;">
+        <table class="data-table">
+          <thead><tr><th>Client</th><th>Keyword</th><th>Volume</th><th>Current</th><th>Previous</th><th>Change</th><th>Target</th><th>Last checked</th></tr></thead>
+          <tbody id="seo-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="module" src="../js/seo.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ads · Marketing OS</title>
+<link rel="stylesheet" href="../css/variables.css" />
+<link rel="stylesheet" href="../css/base.css" />
+<link rel="stylesheet" href="../css/layout.css" />
+<link rel="stylesheet" href="../css/components.css" />
+<link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+<div class="app-shell">
+  <div id="sidebar-slot"></div>
+  <div class="main">
+    <div class="topbar" id="topbar-slot"></div>
+    <div class="page">
+      <div class="page-header">
+        <div><h1>Ads</h1><p class="sub">Paid campaign performance for every client running ads.</p></div>
+        <div class="page-actions">
+          <select class="select-filter" id="f-client"><option value="">All clients</option></select>
+          <select class="select-filter" id="f-platform"><option value="">All platforms</option><option>Meta</option><option>Google</option><option>LinkedIn</option></select>
+        </div>
+      </div>
+
+      <div class="kpi-grid" id="ads-kpis" style="grid-template-columns:repeat(4,1fr);"></div>
+      <div class="client-grid" id="ads-grid"></div>
+    </div>
+  </div>
+</div>
+<script type="module" src="../js/ads.js"></script>
+</body>
+</html>

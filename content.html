@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Content · Marketing OS</title>
+<link rel="stylesheet" href="../css/variables.css" />
+<link rel="stylesheet" href="../css/base.css" />
+<link rel="stylesheet" href="../css/layout.css" />
+<link rel="stylesheet" href="../css/components.css" />
+<link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+<div class="app-shell">
+  <div id="sidebar-slot"></div>
+  <div class="main">
+    <div class="topbar" id="topbar-slot"></div>
+    <div class="page">
+
+      <div class="page-header">
+        <div>
+          <h1>Content</h1>
+          <p class="sub">Every client's calendar in one place — filter down to what matters right now.</p>
+        </div>
+        <div class="page-actions">
+          <div class="pill-toggle">
+            <button class="active" data-view="calendar">Month</button>
+            <button data-view="list">List</button>
+          </div>
+          <button class="btn btn-primary" id="add-content-btn">+ New Content</button>
+        </div>
+      </div>
+
+      <div class="filters-row">
+        <select class="select-filter" id="f-client"><option value="">All clients</option></select>
+        <select class="select-filter" id="f-platform"><option value="">All platforms</option></select>
+        <select class="select-filter" id="f-status"><option value="">All statuses</option></select>
+        <select class="select-filter" id="f-type"><option value="">All types</option></select>
+      </div>
+
+      <div id="calendar-view">
+        <div class="section-title-row">
+          <h2 id="cal-month-label">—</h2>
+          <div class="pill-toggle">
+            <button id="cal-prev">‹ Prev</button>
+            <button id="cal-today">Today</button>
+            <button id="cal-next">Next ›</button>
+          </div>
+        </div>
+        <div class="cal-grid" id="cal-grid"></div>
+      </div>
+
+      <div id="list-view" style="display:none;">
+        <div class="card" style="padding:0;overflow-x:auto;">
+          <table class="data-table">
+            <thead><tr><th>Title</th><th>Client</th><th>Type</th><th>Platform</th><th>Publish date</th><th>Status</th><th>Priority</th></tr></thead>
+            <tbody id="list-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="content-overlay"></div>
+
+<script type="module" src="../js/content.js"></script>
+</body>
+</html>

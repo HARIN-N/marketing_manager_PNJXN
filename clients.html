@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Clients · Marketing OS</title>
+<link rel="stylesheet" href="../css/variables.css" />
+<link rel="stylesheet" href="../css/base.css" />
+<link rel="stylesheet" href="../css/layout.css" />
+<link rel="stylesheet" href="../css/components.css" />
+<link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+<div class="app-shell">
+  <div id="sidebar-slot"></div>
+  <div class="main">
+    <div class="topbar" id="topbar-slot"></div>
+    <div class="page">
+
+      <div class="page-header">
+        <div>
+          <h1>Clients</h1>
+          <p class="sub">Every client is a configurable workspace — add a new one without touching any code.</p>
+        </div>
+        <div class="page-actions">
+          <div class="pill-toggle">
+            <button class="active" data-view="grid">Grid</button>
+            <button data-view="list">List</button>
+          </div>
+          <button class="btn btn-primary" id="add-client-btn">+ Add Client</button>
+        </div>
+      </div>
+
+      <div class="filters-row">
+        <input class="input select-filter" style="width:220px;" id="client-search" placeholder="Search clients…" />
+        <select class="select-filter" id="filter-industry"><option value="">All industries</option></select>
+        <select class="select-filter" id="filter-status">
+          <option value="">All statuses</option>
+          <option>Active</option>
+          <option>Onboarding</option>
+          <option>Paused</option>
+        </select>
+      </div>
+
+      <div id="client-grid" class="client-grid"></div>
+      <div id="client-list-wrap" style="display:none;">
+        <div class="card" style="padding:0;overflow-x:auto;">
+          <table class="data-table" id="client-table">
+            <thead><tr><th>Client</th><th>Industry</th><th>Account Manager</th><th>Health</th><th>Active Tasks</th><th>Approvals</th><th>Status</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="add-client-overlay"></div>
+
+<script type="module" src="../js/clients.js"></script>
+</body>
+</html>

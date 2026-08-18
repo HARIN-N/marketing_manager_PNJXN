@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Settings · Marketing OS</title>
+<link rel="stylesheet" href="../css/variables.css" />
+<link rel="stylesheet" href="../css/base.css" />
+<link rel="stylesheet" href="../css/layout.css" />
+<link rel="stylesheet" href="../css/components.css" />
+<link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+<div class="app-shell">
+  <div id="sidebar-slot"></div>
+  <div class="main">
+    <div class="topbar" id="topbar-slot"></div>
+    <div class="page">
+      <div class="page-header">
+        <div><h1>Settings</h1><p class="sub">Workspace-wide configuration.</p></div>
+      </div>
+
+      <div class="two-col">
+        <div class="stack">
+          <div class="card">
+            <div class="card-title-row"><h2>Company information</h2></div>
+            <div class="field"><label>Agency name</label><input class="input" value="Your Marketing Agency" /></div>
+            <div class="field"><label>Primary contact email</label><input class="input" value="hello@agency.example.com" /></div>
+            <button class="btn btn-primary btn-sm">Save</button>
+          </div>
+
+          <div class="card">
+            <div class="card-title-row"><h2>Appearance</h2></div>
+            <div class="field">
+              <label>Theme</label>
+              <div class="pill-toggle">
+                <button class="active" id="theme-light">Light</button>
+                <button id="theme-dark">Dark</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title-row"><h2>Notification preferences</h2></div>
+            ${["Approval requested", "Task overdue", "Comment added", "Content deadline approaching", "Report due", "SEO alert"].map(
+              (n) => `<label style="display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--color-border);font-size:13px;"><input type="checkbox" checked /> ${n}</label>`
+            ).join("")}
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="card">
+            <div class="card-title-row"><h2>Integrations</h2></div>
+            <p class="muted" style="font-size:12.5px;margin-bottom:var(--space-4);">Configurable per client — connect these once the Supabase backend is wired up.</p>
+            ${["Meta Marketing API", "Google Analytics", "Google Search Console", "Google Business Profile", "Google Drive", "Slack", "WhatsApp Business", "OpenAI"].map(
+              (i) => `<div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--color-border);font-size:13px;"><span>${i}</span><span class="badge badge-neutral">Not connected</span></div>`
+            ).join("")}
+          </div>
+
+          <div class="card">
+            <div class="card-title-row"><h2>AI settings</h2></div>
+            <div class="field"><label>Model</label><input class="input" value="Configured server-side" disabled /></div>
+            <p class="hint">The OpenAI API key is never exposed to the browser. See README → "AI Assistant architecture".</p>
+          </div>
+
+          <div class="card">
+            <div class="card-title-row"><h2>Danger zone</h2></div>
+            <p class="muted" style="font-size:12.5px;margin-bottom:var(--space-3);">Restore all demo data to its original seed state.</p>
+            <button class="btn btn-danger btn-sm" id="reset-btn">Reset demo data</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="module" src="../js/settings.js"></script>
+</body>
+</html>

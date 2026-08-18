@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard · Marketing OS</title>
+<link rel="stylesheet" href="../css/variables.css" />
+<link rel="stylesheet" href="../css/base.css" />
+<link rel="stylesheet" href="../css/layout.css" />
+<link rel="stylesheet" href="../css/components.css" />
+<link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+<div class="app-shell">
+  <div id="sidebar-slot"></div>
+  <div class="main">
+    <div class="topbar" id="topbar-slot"></div>
+    <div class="page">
+
+      <div class="page-header">
+        <div>
+          <div class="eyebrow" id="dash-date"></div>
+          <h1 id="dash-greeting">Good morning</h1>
+          <p class="sub">Here's what needs your attention today.</p>
+        </div>
+        <div class="page-actions">
+          <button class="btn" id="reset-demo-btn">Reset demo data</button>
+        </div>
+      </div>
+
+      <div class="kpi-grid" id="kpi-grid">
+        <div class="kpi-card skeleton skel-card"></div><div class="kpi-card skeleton skel-card"></div>
+        <div class="kpi-card skeleton skel-card"></div><div class="kpi-card skeleton skel-card"></div>
+        <div class="kpi-card skeleton skel-card"></div><div class="kpi-card skeleton skel-card"></div>
+      </div>
+
+      <div class="two-col">
+        <div class="stack">
+          <div class="card">
+            <div class="card-title-row"><h2>Needs Your Attention</h2><span class="badge badge-neutral" id="attention-count">—</span></div>
+            <div id="attention-list"><div class="skel-line skeleton" style="width:90%"></div><div class="skel-line skeleton" style="width:70%"></div></div>
+          </div>
+
+          <div class="card">
+            <div class="card-title-row"><h2>Client Health</h2><a class="card-link" href="clients.html">View all clients</a></div>
+            <div id="health-list"><div class="skel-line skeleton" style="width:100%"></div></div>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="card">
+            <div class="card-title-row"><h2>Today's Work</h2><span class="badge badge-neutral" id="today-count">—</span></div>
+            <div id="today-list"><div class="skel-line skeleton" style="width:95%"></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script type="module" src="../js/dashboard.js"></script>
+</body>
+</html>

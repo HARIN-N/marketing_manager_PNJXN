@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Reports · Marketing OS</title>
+<link rel="stylesheet" href="../css/variables.css" />
+<link rel="stylesheet" href="../css/base.css" />
+<link rel="stylesheet" href="../css/layout.css" />
+<link rel="stylesheet" href="../css/components.css" />
+<link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+<div class="app-shell">
+  <div id="sidebar-slot"></div>
+  <div class="main">
+    <div class="topbar" id="topbar-slot"></div>
+    <div class="page">
+      <div class="page-header">
+        <div><h1>Reports</h1><p class="sub">Monthly reporting history for every client.</p></div>
+      </div>
+      <div class="kpi-grid" id="report-kpis" style="grid-template-columns:repeat(3,1fr);"></div>
+      <div class="card" style="padding:0;overflow-x:auto;">
+        <table class="data-table">
+          <thead><tr><th>Client</th><th>Period</th><th>Prepared by</th><th>Status</th><th>Generated</th></tr></thead>
+          <tbody id="report-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="module" src="../js/reports.js"></script>
+</body>
+</html>

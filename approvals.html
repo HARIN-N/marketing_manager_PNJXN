@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Approvals · Marketing OS</title>
+<link rel="stylesheet" href="../css/variables.css" />
+<link rel="stylesheet" href="../css/base.css" />
+<link rel="stylesheet" href="../css/layout.css" />
+<link rel="stylesheet" href="../css/components.css" />
+<link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+<div class="app-shell">
+  <div id="sidebar-slot"></div>
+  <div class="main">
+    <div class="topbar" id="topbar-slot"></div>
+    <div class="page">
+
+      <div class="page-header">
+        <div>
+          <h1>Approval Center</h1>
+          <p class="sub">Everything waiting on a decision, across every client.</p>
+        </div>
+        <div class="page-actions">
+          <select class="select-filter" id="f-client"><option value="">All clients</option></select>
+        </div>
+      </div>
+
+      <div class="tabs" id="approval-tabs">
+        <div class="tab active" data-tab="Pending">Pending</div>
+        <div class="tab" data-tab="Approved">Approved</div>
+        <div class="tab" data-tab="Changes Requested">Changes Requested</div>
+      </div>
+
+      <div id="approval-list"></div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="approval-overlay"></div>
+
+<script type="module" src="../js/approvals.js"></script>
+</body>
+</html>

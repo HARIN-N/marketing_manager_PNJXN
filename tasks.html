@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tasks · Marketing OS</title>
+<link rel="stylesheet" href="../css/variables.css" />
+<link rel="stylesheet" href="../css/base.css" />
+<link rel="stylesheet" href="../css/layout.css" />
+<link rel="stylesheet" href="../css/components.css" />
+<link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+<div class="app-shell">
+  <div id="sidebar-slot"></div>
+  <div class="main">
+    <div class="topbar" id="topbar-slot"></div>
+    <div class="page">
+
+      <div class="page-header">
+        <div>
+          <h1>Tasks</h1>
+          <p class="sub">Marketing work across every client, in one board.</p>
+        </div>
+        <div class="page-actions">
+          <div class="pill-toggle">
+            <button class="active" data-view="kanban">Kanban</button>
+            <button data-view="list">List</button>
+          </div>
+          <button class="btn btn-primary" id="add-task-btn">+ New Task</button>
+        </div>
+      </div>
+
+      <div class="filters-row">
+        <select class="select-filter" id="f-client"><option value="">All clients</option></select>
+        <select class="select-filter" id="f-category"><option value="">All categories</option></select>
+        <select class="select-filter" id="f-priority"><option value="">All priorities</option></select>
+      </div>
+
+      <div id="kanban-view"><div class="kanban-board" id="kanban-board"></div></div>
+      <div id="list-view" style="display:none;">
+        <div class="card" style="padding:0;overflow-x:auto;">
+          <table class="data-table">
+            <thead><tr><th>Title</th><th>Client</th><th>Category</th><th>Priority</th><th>Due date</th><th>Status</th></tr></thead>
+            <tbody id="list-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="task-overlay"></div>
+
+<script type="module" src="../js/tasks.js"></script>
+</body>
+</html>
